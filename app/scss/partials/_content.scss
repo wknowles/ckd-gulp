@@ -1,0 +1,5 @@
+.slider {
+  @include outer-container;
+  padding: 2em 0;
+  img{ @include span-columns(12);}
+}

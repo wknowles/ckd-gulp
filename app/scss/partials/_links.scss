@@ -1,0 +1,7 @@
+a {
+  color: $color-text-alt;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

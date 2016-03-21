@@ -1,12 +1,17 @@
 // require gulp
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
+var gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
+    sass = require('gulp-sass'),
+    bourbon = require("node-bourbon").includePaths,
+    neat = require("node-neat").includePaths;
 
 // gulp task to process sass into css
 gulp.task('sass', function(){
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss
-    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(sass({
+                includePaths: bourbon,
+                includePaths: neat
+            })) // Converts Sass to CSS with gulp-sass
     .pipe(gulp.dest('app/css')) //Sets destination of processed sass
     .pipe(browserSync.reload({ // Tells browserSync to reload when sass changes
       stream: true

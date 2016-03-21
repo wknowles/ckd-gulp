@@ -1,0 +1,10 @@
+footer {
+  @include outer-container;
+  .vcard { @include span-columns(3); }
+  .logos { @include span-columns(4);
+  }
+}
+
+.adr {
+  margin-bottom: 1rem;
+}

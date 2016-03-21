@@ -1,0 +1,33 @@
+//Typography
+$base-font-size: 16px;
+$base-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font weights
+$light: 100;
+$semi-light: 300;
+$regular: 400;
+$semi-bold: 500;
+
+//Colours
+$color-bg-base: rgba(244, 244, 244, 1);
+$color-bg-highlight: rgba(222, 222, 222, 1);
+$color-text-base: rgba(0, 31, 63, 1);
+$color-text-alt: lighten(desaturate($color-text-base, 85), 30);
+
+$color-what: rgba(172,181,190,1);
+$white: #FCFDFF;
+$black: #000;
+$grey: #8c8c8c;
+$purple: #001F3F;
+$blue: #0074D9;
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $color-text-base;
+}
+
+h1, h2 {
+  margin: 1em 0;
+  font-size: $base-font-size;
+}
