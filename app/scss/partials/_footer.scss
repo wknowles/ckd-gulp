@@ -1,10 +1,36 @@
 footer {
-  @include outer-container;
-  .vcard { @include span-columns(3); }
-  .logos { @include span-columns(4);
-  }
+  @include align-items(flex-end);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  margin: 2em 0;
+}
+
+.vcard {
 }
 
 .adr {
   margin-bottom: 1rem;
 }
+
+a[href^="tel:"]:before {
+  content: "tel:";
+  margin-right: 0.5em;
+}
+
+a[href^="mailto:"]:before {
+  content: "email:";
+  margin-right: 0.5em;
+}
+
+.logos{
+
+}
+
+.ckd-logo {
+  max-height: 75px;
+  width: auto;
+  margin-left:2em;
+}
+
+

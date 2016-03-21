@@ -1,5 +1,13 @@
-.slider {
+.about {
   @include outer-container;
-  padding: 2em 0;
-  img{ @include span-columns(12);}
+  margin-bottom: 6em;
+  .practice { @include span-columns(7); }
+  .practice-sketch { background: $color-bg-highlight; @include span-columns(5); @include omega();}
+  .charles { @include span-columns(9);}
+  .charles-img { background: $color-bg-highlight; margin-top: rem(28); @include span-columns(3); @include omega();}
 }
+
+
+
+
+

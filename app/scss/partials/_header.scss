@@ -1,15 +1,37 @@
 header {
-  @include outer-container;
-  padding: 1em 0 0;
-  h1 { @include span-columns(8);}
-  nav { @include span-columns(4);
+  padding: 2em 0 1em;
+  @include align-items(baseline);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  h1 {
+    a {
+      color: $color-text-base;
+      border-bottom: .1em solid $color-text-alt;
+      padding-bottom: .1em;
+      &:hover {
+        text-decoration: none;
+        }
+    }
+  }
+
+  nav {
     ul{
       list-style: none;
-      float: right;
     }
     li {
       display: inline-block;
       padding: 0 1em;
+      &:last-child {
+        padding: 0 0 0 1em;
+      }
+      a {
+        border-bottom: .1em solid $color-text-alt;
+        padding-bottom: .1em;
+      &:hover {
+        text-decoration: none;
+        }
+      }
     }
   }
 }
