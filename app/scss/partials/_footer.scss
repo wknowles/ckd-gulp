@@ -4,6 +4,14 @@ footer {
   @include flex-direction(row);
   @include justify-content(space-between);
   margin: 2em 0;
+  a {
+      color: $color-text-base;
+      // border-bottom: .1em solid $color-text-alt;
+      // padding-bottom: .1em;
+      &:hover {
+        text-decoration: none;
+        }
+    }
 }
 
 .vcard {
@@ -13,15 +21,15 @@ footer {
   // margin-bottom: 1rem;
 }
 
-a[href^="tel:"]:before {
-  content: "tel:";
-  margin-right: 0.5em;
-}
+// a[href^="tel:"]:before {
+//   content: "tel:";
+//   margin-right: 0.5em;
+// }
 
-a[href^="mailto:"]:before {
-  content: "email:";
-  margin-right: 0.5em;
-}
+// a[href^="mailto:"]:before {
+//   content: "email:";
+//   margin-right: 0.5em;
+// }
 
 .logos{
 

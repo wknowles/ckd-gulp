@@ -13,7 +13,7 @@ $semi-bold: 500;
 $color-bg-base: rgba(244, 244, 244, 1);
 $color-bg-highlight: rgba(222, 222, 222, 1);
 $color-text-base: rgba(5, 5, 15, 1);
-$color-text-alt: lighten(desaturate($color-text-base, 10), 40);
+$color-text-alt: lighten(desaturate($color-text-base, 30), 50);
 
 //Media Queries
 $mobile: new-breakpoint(max-width 500px 3);

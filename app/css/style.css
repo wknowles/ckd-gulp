@@ -17,7 +17,7 @@ h1, h2 {
   font-weight: 500; }
 
 a {
-  color: #43439d;
+  color: #7272a1;
   text-decoration: none; }
   a:hover {
     text-decoration: none; }
@@ -60,9 +60,7 @@ header {
   justify-content: space-between;
   -ms-flex-pack: justify; }
   header h1 a {
-    color: #05050f;
-    border-bottom: 0.1em solid #43439d;
-    padding-bottom: .1em; }
+    color: #05050f; }
     header h1 a:hover {
       text-decoration: none; }
   header nav ul {
@@ -77,10 +75,10 @@ header {
       -webkit-transition: color 0.3s ease-in-out;
       -moz-transition: color 0.3s ease-in-out;
       transition: color 0.3s ease-in-out;
-      border-bottom: 0.1em solid #43439d;
+      border-bottom: 0.1em solid #7272a1;
       padding-bottom: .1em; }
       header nav li a:hover {
-        color: #43439d;
+        color: #7272a1;
         text-decoration: none; }
 
 .about {
@@ -132,10 +130,10 @@ header {
     -webkit-transition: color 0.3s ease-in-out;
     -moz-transition: color 0.3s ease-in-out;
     transition: color 0.3s ease-in-out;
-    border-bottom: 0.1em solid #43439d;
+    border-bottom: 0.1em solid #7272a1;
     padding-bottom: .1em; }
     .about a:hover {
-      color: #43439d;
+      color: #7272a1;
       text-decoration: none; }
 
 .projects {
@@ -210,14 +208,10 @@ footer {
   justify-content: space-between;
   -ms-flex-pack: justify;
   margin: 2em 0; }
-
-a[href^="tel:"]:before {
-  content: "tel:";
-  margin-right: 0.5em; }
-
-a[href^="mailto:"]:before {
-  content: "email:";
-  margin-right: 0.5em; }
+  footer a {
+    color: #05050f; }
+    footer a:hover {
+      text-decoration: none; }
 
 .ckd-logo {
   max-height: 75px;
