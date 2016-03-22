@@ -1,5 +1,5 @@
 header {
-  padding: 2em 0 1em;
+  padding: 2em 0;
   @include align-items(baseline);
   @include display(flex);
   @include flex-direction(row);

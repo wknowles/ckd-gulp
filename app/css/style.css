@@ -23,7 +23,7 @@ a {
     text-decoration: underline; }
 
 header {
-  padding: 2em 0 1em;
+  padding: 2em 0;
   -webkit-box-align: baseline;
   -moz-box-align: baseline;
   box-align: baseline;
@@ -91,16 +91,17 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 57.35098%; }
+    width: 57.35098%;
+    margin-bottom: 2em; }
     .about .practice:last-child {
       margin-right: 0; }
   .about .practice-sketch {
-    background: #dedede;
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-bottom: 2em; }
     .about .practice-sketch:last-child {
       margin-right: 0; }
   .about .charles {
@@ -111,8 +112,6 @@ header {
     .about .charles:last-child {
       margin-right: 0; }
   .about .charles-img {
-    background: #dedede;
-    margin-top: 1.75rem;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -120,6 +119,9 @@ header {
     margin-right: 0; }
     .about .charles-img:last-child {
       margin-right: 0; }
+  .about img {
+    display: block;
+    width: 100%; }
 
 .projects {
   max-width: 68em;
@@ -137,8 +139,7 @@ header {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 23.23176%;
-    border: 1px black solid; }
+    width: 23.23176%; }
     .projects li:last-child {
       margin-right: 0; }
     .projects li:nth-child(4n) {
@@ -153,6 +154,9 @@ header {
         width: 100%; }
         .projects li:last-child {
           margin-right: 0; } }
+  .projects img {
+    display: block;
+    width: 100%; }
 
 footer {
   -webkit-box-align: end;

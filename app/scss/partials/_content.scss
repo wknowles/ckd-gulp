@@ -1,10 +1,14 @@
 .about {
   @include outer-container;
   margin-bottom: 6em;
-  .practice { @include span-columns(7); }
-  .practice-sketch { background: $color-bg-highlight; @include span-columns(5); @include omega();}
-  .charles { @include span-columns(9);}
-  .charles-img { background: $color-bg-highlight; margin-top: rem(28); @include span-columns(3); @include omega();}
+  .practice {  @include span-columns(7);margin-bottom: 2em;}
+  .practice-sketch {  @include span-columns(5); @include omega();margin-bottom: 2em;}
+  .charles {  @include span-columns(9);}
+  .charles-img {  @include span-columns(3); @include omega();}
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .projects {
@@ -14,11 +18,15 @@
     margin-bottom: 1.4em;
     @include span-columns(3);
     @include omega(4n);
-    border: 1px black solid;
+    // border: 1px blue solid;
     @include media($mobile) {
       @include span-columns(3);
       // @include fill-parent;
     }
+  }
+  img {
+    display: block;
+    width: 100%;
   }
 }
 
