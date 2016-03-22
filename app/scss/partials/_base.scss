@@ -15,6 +15,9 @@ $color-bg-highlight: rgba(222, 222, 222, 1);
 $color-text-base: rgba(5, 5, 15, 1);
 $color-text-alt: lighten(desaturate($color-text-base, 85), 30);
 
+//Media Queries
+$mobile: new-breakpoint(max-width 500px 3);
+
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;

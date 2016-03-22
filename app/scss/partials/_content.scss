@@ -7,6 +7,20 @@
   .charles-img { background: $color-bg-highlight; margin-top: rem(28); @include span-columns(3); @include omega();}
 }
 
+.projects {
+  @include outer-container;
+  ul{margin: 0; padding: 0;}
+    li {
+    margin-bottom: 1.4em;
+    @include span-columns(3);
+    @include omega(4n);
+    border: 1px black solid;
+    @include media($mobile) {
+      @include span-columns(3);
+      // @include fill-parent;
+    }
+  }
+}
 
 
 

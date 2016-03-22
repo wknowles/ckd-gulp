@@ -121,6 +121,39 @@ header {
     .about .charles-img:last-child {
       margin-right: 0; }
 
+.projects {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .projects::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .projects ul {
+    margin: 0;
+    padding: 0; }
+  .projects li {
+    margin-bottom: 1.4em;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    border: 1px black solid; }
+    .projects li:last-child {
+      margin-right: 0; }
+    .projects li:nth-child(4n) {
+      margin-right: 0; }
+    .projects li:nth-child(4n+1) {
+      clear: left; }
+    @media screen and (max-width: 500px) {
+      .projects li {
+        float: left;
+        display: block;
+        margin-right: 10.1484%;
+        width: 100%; }
+        .projects li:last-child {
+          margin-right: 0; } }
+
 footer {
   -webkit-box-align: end;
   -moz-box-align: end;
