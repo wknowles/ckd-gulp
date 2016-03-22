@@ -17,10 +17,10 @@ h1, h2 {
   font-weight: 500; }
 
 a {
-  color: #575757;
+  color: #43439d;
   text-decoration: none; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
 
 header {
   padding: 2em 0;
@@ -61,7 +61,7 @@ header {
   -ms-flex-pack: justify; }
   header h1 a {
     color: #05050f;
-    border-bottom: 0.1em solid #575757;
+    border-bottom: 0.1em solid #43439d;
     padding-bottom: .1em; }
     header h1 a:hover {
       text-decoration: none; }
@@ -73,9 +73,14 @@ header {
     header nav li:last-child {
       padding: 0 0 0 1em; }
     header nav li a {
-      border-bottom: 0.1em solid #575757;
+      color: #05050f;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out;
+      border-bottom: 0.1em solid #43439d;
       padding-bottom: .1em; }
       header nav li a:hover {
+        color: #43439d;
         text-decoration: none; }
 
 .about {
@@ -122,6 +127,16 @@ header {
   .about img {
     display: block;
     width: 100%; }
+  .about a {
+    color: #05050f;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+    border-bottom: 0.1em solid #43439d;
+    padding-bottom: .1em; }
+    .about a:hover {
+      color: #43439d;
+      text-decoration: none; }
 
 .projects {
   max-width: 68em;
@@ -195,9 +210,6 @@ footer {
   justify-content: space-between;
   -ms-flex-pack: justify;
   margin: 2em 0; }
-
-.adr {
-  margin-bottom: 1rem; }
 
 a[href^="tel:"]:before {
   content: "tel:";

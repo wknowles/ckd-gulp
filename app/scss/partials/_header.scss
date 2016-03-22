@@ -26,9 +26,12 @@ header {
         padding: 0 0 0 1em;
       }
       a {
+        color: $color-text-base;
+        @include transition(color 0.3s ease-in-out);
         border-bottom: .1em solid $color-text-alt;
         padding-bottom: .1em;
       &:hover {
+        color: $color-text-alt;
         text-decoration: none;
         }
       }
