@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 gulp.task('nunjucks', function() {
   nunjucksRender.nunjucks.configure(['app/templates/']);
   // Gets .html and .nunjucks files in pages
-  return gulp.src('app/pages/**/*.+(html|nunjucks)')
+  return gulp.src('app/pages/**/*.+(html|njk|nunjucks)')
   // Renders template with nunjucks
   .pipe(nunjucksRender())
   // output files in app folder
@@ -53,7 +53,7 @@ gulp.task('watch', ['browserSync', 'nunjucks', 'sass'], function (){
 // Reloads the browser whenever HTML, JS or NUNJUCKS files change
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
-  gulp.watch('app/pages/**/*.+(html|nunjucks)', ['nunjucks']);
+  gulp.watch('app/pages/**/*.+(html|njk||nunjucks)', ['nunjucks']);
 });
 
 // gulp task to combine, minify and concat css & js
