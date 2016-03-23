@@ -11,7 +11,19 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache'),
     del = require('del'),
-    runSequence = require('run-sequence');
+    runSequence = require('run-sequence'),
+    nunjucksRender = require('gulp-nunjucks-render');
+
+// gulp task to combine partial html files
+gulp.task('nunjucks', function() {
+  nunjucksRender.nunjucks.configure(['app/templates/']);
+  // Gets .html and .nunjucks files in pages
+  return gulp.src('app/pages/**/*.+(html|nunjucks)')
+  // Renders template with nunjucks
+  .pipe(nunjucksRender())
+  // output files in app folder
+  .pipe(gulp.dest('app'));
+});
 
 // gulp task to process sass into css
 gulp.task('sass', function(){
@@ -36,11 +48,12 @@ gulp.task('browserSync', function() {
 });
 
 // gulp task to watch for changes and then run tasks above
-gulp.task('watch', ['browserSync', 'sass'], function (){
+gulp.task('watch', ['browserSync', 'nunjucks', 'sass'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
-  // // Reloads the browser whenever HTML or JS files change
+// Reloads the browser whenever HTML, JS or NUNJUCKS files change
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('app/pages/**/*.+(html|nunjucks)', ['nunjucks']);
 });
 
 // gulp task to combine, minify and concat css & js
@@ -48,15 +61,15 @@ gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
-    // Minifies only if it's a CSS file
+// Minifies only if it's a CSS file
     .pipe(gulpIf('*.css', cssnano()))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'));
 });
 
 // gulp task to optimize images
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
-  // Caching images that ran through imagemin
+// Caching images that ran through imagemin
   .pipe(cache(imagemin({
       interlaced: true
     })))
@@ -71,13 +84,13 @@ gulp.task('clean:dist', function() {
 // gulp build to put everything together
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images'],
+    ['nunjucks', 'sass', 'useref', 'images'],
     callback
   );
 });
 
 gulp.task('default', function (callback) {
-  runSequence(['sass','browserSync', 'watch'],
+  runSequence(['nunjucks', 'sass', 'browserSync', 'watch'],
     callback
   )
 });
