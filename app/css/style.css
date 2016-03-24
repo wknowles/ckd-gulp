@@ -80,6 +80,9 @@ header {
       header nav li a:hover {
         color: #7272a1;
         text-decoration: none; }
+      header nav li a.active {
+        color: #7272a1;
+        text-decoration: none; }
 
 .about {
   max-width: 68em;

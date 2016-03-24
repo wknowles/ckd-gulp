@@ -50,10 +50,10 @@ gulp.task('browserSync', function() {
 // gulp task to watch for changes and then run tasks above
 gulp.task('watch', ['browserSync', 'nunjucks', 'sass'], function (){
   gulp.watch('app/scss/**/*.scss', ['sass']);
-// Reloads the browser whenever HTML, JS or NUNJUCKS files change
+  gulp.watch('app/pages/**/*.+(html|njk|nunjucks)', ['nunjucks']);
+  gulp.watch('app/templates/**/*.+(html|njk|nunjucks)', ['nunjucks']);
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
-  gulp.watch('app/pages/**/*.+(html|njk||nunjucks)', ['nunjucks']);
 });
 
 // gulp task to combine, minify and concat css & js

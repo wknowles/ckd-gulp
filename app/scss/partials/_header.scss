@@ -34,6 +34,10 @@ header {
         color: $color-text-alt;
         text-decoration: none;
         }
+      &.active {
+        color: $color-text-alt;
+        text-decoration: none;
+        }
       }
     }
   }
