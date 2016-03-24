@@ -1,6 +1,4 @@
-{% include "app/templates/partials/head.njk" %}
-{% include "app/templates/partials/header.njk" %}
-
+{% extends "app/templates/layout.njk" %}
 {% block content %}
   <div class="projects">
       <ul>
@@ -19,5 +17,3 @@
      </ul>
   </div>
 {% endblock %}
-
-{% include "app/templates/partials/footer.njk" %}

@@ -1,6 +1,10 @@
 <header>
-    <img class="ckd-logo" src="images/ckd-logo.svg">
+  <img class="ckd-logo" src="images/ckd-logo.svg">
     <h1><a href="/">Charles Knowles Design : Architects</a></h1>
-    {% import 'app/templates/macros/nav.njk' as nav %}
-    {{nav.active('about')}}
+    <nav>
+      <ul>
+        <li><a href="about.html">About Us</a></li> /
+        <li><a href="projects.html">Selected Projects</a></li>
+      </ul>
+    </nav>
 </header>
