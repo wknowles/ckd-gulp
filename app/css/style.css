@@ -24,15 +24,15 @@ a {
 
 header {
   padding: 2em 0;
-  -webkit-box-align: baseline;
-  -moz-box-align: baseline;
-  box-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-align-items: baseline;
-  -ms-align-items: baseline;
-  -o-align-items: baseline;
-  align-items: baseline;
-  -ms-flex-align: baseline;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -83,6 +83,10 @@ header {
       header nav li a.active {
         color: #7272a1;
         text-decoration: none; }
+
+.ckd-logo {
+  max-height: 4rem;
+  width: auto; }
 
 .about {
   max-width: 68em;
@@ -215,8 +219,3 @@ footer {
     color: #05050f; }
     footer a:hover {
       text-decoration: none; }
-
-.ckd-logo {
-  max-height: 75px;
-  width: auto;
-  margin-left: 2em; }

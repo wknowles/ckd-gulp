@@ -1,6 +1,6 @@
 header {
   padding: 2em 0;
-  @include align-items(baseline);
+  @include align-items(center);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(space-between);
@@ -41,4 +41,10 @@ header {
       }
     }
   }
+}
+
+.ckd-logo {
+  max-height: 4rem;
+  width: auto;
+  // margin-left:2em;
 }
