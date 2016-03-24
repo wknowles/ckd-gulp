@@ -5,10 +5,9 @@ header {
   @include flex-direction(row);
   @include justify-content(space-between);
   h1 {
+      margin-right: auto;
     a {
       color: $color-text-base;
-      // border-bottom: .1em solid $color-text-alt;
-      // padding-bottom: .1em;
       &:hover {
         text-decoration: none;
         }
@@ -46,5 +45,5 @@ header {
 .ckd-logo {
   max-height: 4rem;
   width: auto;
-  // margin-left:2em;
+  margin-right: 2em;
 }

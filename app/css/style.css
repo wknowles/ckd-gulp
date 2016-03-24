@@ -59,10 +59,12 @@ header {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
-  header h1 a {
-    color: #05050f; }
-    header h1 a:hover {
-      text-decoration: none; }
+  header h1 {
+    margin-right: auto; }
+    header h1 a {
+      color: #05050f; }
+      header h1 a:hover {
+        text-decoration: none; }
   header nav ul {
     list-style: none; }
   header nav li {
@@ -86,7 +88,8 @@ header {
 
 .ckd-logo {
   max-height: 4rem;
-  width: auto; }
+  width: auto;
+  margin-right: 2em; }
 
 .about {
   max-width: 68em;
