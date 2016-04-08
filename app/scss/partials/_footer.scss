@@ -1,9 +1,10 @@
 footer {
+  @include outer-container;
   @include align-items(flex-end);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(space-between);
-  margin: 4em 0;
+  padding: 4em 0;
   a {
       color: $color-text-base;
       // border-bottom: .1em solid $color-text-alt;

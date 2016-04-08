@@ -4,17 +4,38 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+html {
+  font-size: 1em; }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  color: #05050f;
-  line-height: 1.625rem;
-  margin: 0 auto;
-  max-width: 960px; }
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
 
-h1, h2 {
-  font-size: 1.125rem;
-  font-weight: 500; }
+p {
+  margin-bottom: 1.3em; }
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2; }
+
+h1 {
+  margin-top: 0;
+  font-size: 1.602em; }
+
+h2 {
+  font-size: 1.424em; }
+
+h3 {
+  font-size: 1.266em; }
+
+h4 {
+  font-size: 1.125em; }
+
+small, .font_small {
+  font-size: 0.889em; }
 
 a {
   color: #7272a1;
@@ -23,6 +44,9 @@ a {
     text-decoration: none; }
 
 header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2em 0;
   -webkit-box-align: center;
   -moz-box-align: center;
@@ -59,6 +83,10 @@ header {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
+  header::after {
+    clear: both;
+    content: "";
+    display: table; }
   header h1 {
     margin-right: auto; }
     header h1 a {
@@ -183,6 +211,9 @@ header {
     width: 100%; }
 
 footer {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-box-align: end;
   -moz-box-align: end;
   box-align: end;
@@ -218,7 +249,11 @@ footer {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  margin: 4em 0; }
+  padding: 4em 0; }
+  footer::after {
+    clear: both;
+    content: "";
+    display: table; }
   footer a {
     color: #05050f; }
     footer a:hover {
