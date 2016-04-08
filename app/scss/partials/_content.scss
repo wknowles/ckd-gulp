@@ -6,6 +6,7 @@
   .charles {  @include span-columns(9);}
   .charles-img {  @include span-columns(3); @include omega();}
   img {
+    margin-top: 1em;
     display: block;
     width: 100%;
   }

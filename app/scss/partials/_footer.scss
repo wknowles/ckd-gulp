@@ -3,7 +3,7 @@ footer {
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(space-between);
-  margin: 2em 0;
+  margin: 4em 0;
   a {
       color: $color-text-base;
       // border-bottom: .1em solid $color-text-alt;
@@ -18,7 +18,7 @@ footer {
 }
 
 .adr {
-  // margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 // a[href^="tel:"]:before {

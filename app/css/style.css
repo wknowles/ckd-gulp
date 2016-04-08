@@ -133,6 +133,7 @@ header {
     .about .charles-img:last-child {
       margin-right: 0; }
   .about img {
+    margin-top: 1em;
     display: block;
     width: 100%; }
   .about a {
@@ -217,8 +218,11 @@ footer {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
-  margin: 2em 0; }
+  margin: 4em 0; }
   footer a {
     color: #05050f; }
     footer a:hover {
       text-decoration: none; }
+
+.adr {
+  margin-bottom: 0.5rem; }
