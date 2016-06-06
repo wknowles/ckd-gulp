@@ -1,5 +1,8 @@
-{% include "app/templates/partials/head.njk" %}
-{% include "app/templates/partials/header.njk" %}
+---
+title: Home
+---
+
+{% extends "app/templates/layout.njk" %}
 
 {% block content %}
 <!-- slider section / main content -->
@@ -9,4 +12,4 @@
   <img src="images/03.jpg" width="960" height="420">
 </div>
 {% endblock %}
-{% include "app/templates/partials/footer.njk" %}
+

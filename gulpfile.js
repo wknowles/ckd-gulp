@@ -12,18 +12,23 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     del = require('del'),
     runSequence = require('run-sequence'),
-    nunjucksRender = require('gulp-nunjucks-render');
+    nunjucksRender = require('gulp-nunjucks-render'),
+    frontMatter = require('gulp-front-matter');
 
 // gulp task to combine partial html files
 gulp.task('nunjucks', function() {
   nunjucksRender.nunjucks.configure(['app/templates/']);
   // Gets .html and .nunjucks files in pages
   return gulp.src('app/pages/**/*.+(html|njk|nunjucks)')
+  // Gets YAML and binds as data
+  .pipe(frontMatter({ property: 'data' }))
   // Renders template with nunjucks
   .pipe(nunjucksRender())
-  // output files in app folder
+  // output files in temp folder
   .pipe(gulp.dest('app'));
 });
+
+//
 
 // gulp task to process sass into css
 gulp.task('sass', function(){

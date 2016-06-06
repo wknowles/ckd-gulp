@@ -1,6 +1,18 @@
+---
+title: Projects
+projects:
+    - Penthouse in Chelsea
+    - Another todo item
+    - A third todo item
+---
+
 {% extends "app/templates/layout.njk" %}
 {% block content %}
   <div class="projects">
+    <ul>{% for project in projects %}
+          <li><a href="#"><img src="https://placekitten.com/g/230/300">{{ project }}</a></li>
+        {% endfor %}
+    </ul>
       <ul>
         <li><a href="#"><img src="https://placekitten.com/g/230/300"></a></li>
         <li><a href="#"><img src="https://placekitten.com/g/230/300"></a></li>
